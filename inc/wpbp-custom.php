@@ -8,6 +8,7 @@ function enqueue() {
 		// scripts
 		wp_enqueue_script('theme', THEME_URI . '/js/scripts.js', array('jquery'));
 		// styles
+		wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto");
 		wp_enqueue_style('theme', THEME_URI . '/css/master.css', array('wpbp'));
 	}
 }

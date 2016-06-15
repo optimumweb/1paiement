@@ -1,3 +1,4 @@
 /* =============================================================================
    Variables
    ========================================================================== */
+body{font-family:"Roboto","Arial",sans-serif}a{color:#ec534e;text-decoration:underline}#site-title{min-height:150px;background-image:url(../img/logo.png);background-size:cover;background-position:center center;background-repeat:no-repeat}#main-nav{background-color:#43b29e}#main-nav ul.menu{list-style:none;margin:0;padding:0}#main-nav ul.menu>li{display:inline-block;padding:1em}#main-nav a{color:#fff;font-weight:700}
