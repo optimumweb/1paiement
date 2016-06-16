@@ -49,14 +49,15 @@ h1, h2, h3 {
       display: inline-block;
       padding: 1em;
       text-align: center;
-      width: 16%;
 
       > a:before {
-        display: block;
+        display: inline-block;
         font-family: 'FontAwesome', sans-serif;
         font-weight: normal;
-        font-size: 2.5em;
+        font-size: 2em;
+        padding-right: 0.5em;
         color: @white;
+        vertical-align: middle;
       }
 
       &.menu-home > a:before {
