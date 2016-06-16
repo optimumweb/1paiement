@@ -80,7 +80,9 @@ h1, h2, h3 {
 
       &.current-menu-item,
       &.current-menu-ancestor {
-        background-color: @orange;
+        > a {
+          background-color: darken(@green,10%);
+        }
       }
 
       &.menu-home > a:before {
