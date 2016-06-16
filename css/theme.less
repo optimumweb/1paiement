@@ -50,7 +50,13 @@ h1, h2, h3 {
     padding: 0;
 
     > li {
-      display: inline-block;
+      display: block;
+      float: left;
+      border-left: 1px solid @white;
+
+      &:last-child {
+        border-right: 1px solid @white;
+      }
 
       > a {
         display: block;
