@@ -32,6 +32,16 @@ h1, h2, h3 {
     > li {
       display: inline-block;
       padding: 1em;
+      text-align: center;
+
+      &:before {
+        font-family: "FontAwesome", sans-serif;
+        display: block;
+      }
+
+      &.menu-home {
+        content: "&#xf015";
+      }
     }
   }
 

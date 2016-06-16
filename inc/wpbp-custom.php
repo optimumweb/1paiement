@@ -6,6 +6,7 @@ function enqueue() {
 	    // libs
 	    wpbp_enqueue_lib(array('modernizr', 'jquery', 'wpbp'));
 		// scripts
+		wp_enqueue_script('fontawesome', "https://use.fontawesome.com/d85a291cec.js");
 		wp_enqueue_script('theme', THEME_URI . '/js/scripts.js', array('jquery'));
 		// styles
 		wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto");
