@@ -51,16 +51,23 @@ h1, h2, h3 {
 
     > li {
       display: inline-block;
-      padding: 0.5em 1em;
 
-      > a:before {
-        display: inline-block;
-        font-family: 'FontAwesome', sans-serif;
-        font-weight: normal;
-        font-size: 2em;
-        padding-right: 0.5em;
-        color: @white;
-        vertical-align: middle;
+      > a {
+        padding: 0.5em 1em;
+
+        &:before {
+          display: inline-block;
+          font-family: 'FontAwesome', sans-serif;
+          font-weight: normal;
+          font-size: 2em;
+          padding-right: 0.5em;
+          color: @white;
+          vertical-align: middle;
+        }
+
+        &:hover {
+          background-color: @black10;
+        }
       }
 
       &.menu-home > a:before {
