@@ -6,7 +6,9 @@
             <?php wpbp_header_inside_before(); ?>
             <div class="container">
                 <div class="grid_4">
-                    <h1 id="site-title"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
+                    <h1 id="site-title">
+                        <a href="<?php echo home_url(); ?>/"><img src="<?php echo THEME_URI; ?>/img/logo.png" width="800" height="350" alt="<?php bloginfo('name'); ?>" /></a>
+                    </h1>
                 </div>
                 <div class="grid_8">
                     <div id="header-widgets">
