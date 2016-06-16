@@ -20,7 +20,7 @@
         </header>
         <?php wpbp_header_after(); ?>
         <nav id="main-nav" role="navigation">
-            <div class="container">
+            <div class="container fluid">
                 <div class="grid_12">
                     <?php wp_nav_menu( array( 'theme_location' => 'primary_navigation' ) ); ?>
                     <div class="clear"></div>
