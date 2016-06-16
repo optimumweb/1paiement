@@ -34,7 +34,7 @@ h1, h2, h3 {
       padding: 1em;
       text-align: center;
 
-      &:before {
+      > a:before {
         display: block;
         font-family: 'FontAwesome', sans-serif;
         font-weight: normal;
@@ -42,27 +42,27 @@ h1, h2, h3 {
         color: @white;
       }
 
-      &.menu-home:before {
+      &.menu-home > a:before {
         content: "\f015";
       }
 
-      &.menu-solutions:before {
+      &.menu-solutions > a:before {
         content: "\f12e";
       }
 
-      &.menu-faq:before {
+      &.menu-faq > a:before {
         content: "\f059";
       }
 
-      &.menu-calculator:before {
+      &.menu-calculator > a:before {
         content: "\f1ec";
       }
 
-      &.menu-about:before {
+      &.menu-about > a:before {
         content: "\f05a";
       }
 
-      &.menu-contact:before {
+      &.menu-contact > a:before {
         content: "\f003";
       }
     }
