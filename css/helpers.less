@@ -17,7 +17,12 @@
   text-decoration: none !important;
   padding: 1rem 1.5rem;
   .border-radius(@baseRadius);
+  .box-shadow(0,3px,1px,@black20);
   .transition();
+
+  &:hover {
+    .box-shadow(0,3px,5px,@black50);
+  }
 
   &.button-border {
     border: 1px solid;
