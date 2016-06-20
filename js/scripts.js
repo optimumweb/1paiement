@@ -9,4 +9,11 @@ $(document).ready(function() {
         $carousel.owlCarousel(options);
     });
 
+    $('.cover').each(function() {
+        var $cover = $(this);
+        if ( $cover.data('cover-src') ) {
+            $cover.css('background-image', 'url(' + $cover.data('cover-src') + ')');
+        }
+    });
+
 });
