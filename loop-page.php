@@ -5,9 +5,9 @@
         <?php wpbp_post_inside_before(); ?>
         <?php if ( !get_post_meta(get_the_ID(), 'hide_the_title', true) ) : ?>
             <?php if ( has_featured_image() ) : ?>
-                <header class="page-header">
-            <?php else : ?>
                 <header class="page-header page-header-with-bg" data-parallax="scroll" data-image-src="<?php echo get_featured_image_url(); ?>">
+            <?php else : ?>
+                <header class="page-header">
             <?php endif; ?>
                 <h1 class="page-title"><?php the_title(); ?></h1>
                 <?php if ( $page_lead = get_post_meta(get_the_ID(), 'page_lead', true) ) : ?>
