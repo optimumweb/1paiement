@@ -4,7 +4,11 @@
     <article id="page-<?php the_ID(); ?>" class="page">
         <?php wpbp_post_inside_before(); ?>
         <?php if ( !get_post_meta(get_the_ID(), 'hide_the_title', true) ) : ?>
-            <header class="page-header <?php echo has_featured_image() ? "page-header-with-bg" : "" ?>" style="<?php echo has_featured_image() ? "background-image: url(" . get_featured_image_url() . ");" : "" ?>">
+            <?php if ( has_featured_image() ) : ?>
+                <header class="page-header">
+            <?php else : ?>
+                <header class="page-header page-header-with-bg" data-parallax="scroll" data-image-src="<?php echo get_featured_image_url(); ?>">
+            <?php endif; ?>
                 <h1 class="page-title"><?php the_title(); ?></h1>
                 <?php if ( $page_lead = get_post_meta(get_the_ID(), 'page_lead', true) ) : ?>
                     <p class="lead page-lead"><?php echo $page_lead; ?></p>
