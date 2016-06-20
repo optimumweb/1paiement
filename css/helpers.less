@@ -16,7 +16,8 @@
   .border-radius(@baseRadius);
 }
 
-.button {
+.button,
+button {
   display: inline-block;
   font-weight: 500;
   text-transform: uppercase;
@@ -25,6 +26,9 @@
   .border-radius(@baseRadius);
   .box-shadow(0,3px,1px,@black20);
   .transition();
+
+  // gray button by default
+  background-color: @lightGray;
 
   &:hover {
     .box-shadow(0,3px,5px,@black20);
