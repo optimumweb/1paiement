@@ -203,20 +203,25 @@ p {
   padding: 2rem 0;
 }
 
-.page {
+.page,
+.post {
   background-color: @white;
   .border-radius(@baseRadius);
 
   .page-header,
-  .page-content {
+  .post-header,
+  .page-content,
+  .post-content {
     padding: 2rem 3rem;
   }
 
-  .page-header {
+  .page-header,
+  .post-header {
     border-bottom: 1px solid @borderColor;
     .multi-border-radius(@baseRadius, @baseRadius, 0, 0);
 
-    &.page-header-with-bg {
+    &.page-header-with-bg,
+    &.post-header-with-bg {
       color: @white;
       background-position: center center;
       background-size: cover;
@@ -229,7 +234,8 @@ p {
     }
   }
 
-  .page-content {
+  .page-content,
+  .post-header {
     a {
       text-decoration: underline;
     }
