@@ -12,10 +12,11 @@ body {
 
 a {
   color: @orange;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover {
     color: @orange;
+    text-decoration: none;
   }
 }
 
@@ -225,6 +226,12 @@ p {
       h1 {
         color: @white;
       }
+    }
+  }
+
+  .page-content {
+    a {
+      text-decoration: underline;
     }
   }
 }
