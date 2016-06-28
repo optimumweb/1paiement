@@ -17,3 +17,23 @@ $(document).ready(function() {
     });
 
 });
+
+$(window).on('load scroll resize', function() {
+
+    var scrollTop = $(window).scrollTop(),
+        windowHeight = $(window).height();
+
+    $('.cover').each(function() {
+
+        var $cover = $(this),
+            coverHeight = $cover.outerHeight(true),
+            coverOffsetTop = $cover.offset().top;
+
+        var coverTopSpacing    = Math.max(coverOffsetTop - scrollTop, 0),
+            coverBottomSpacing = Math.max(windowHeight - coverTopSpacing - coverHeight, 0);
+
+        console.log(coverTopSpacing, coverBottomSpacing);
+
+    });
+
+});
