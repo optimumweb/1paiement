@@ -29,7 +29,7 @@ $(document).ready(function() {
         var coverOffsetTop = $cover.offset().top,
             coverHeight = $cover.outerHeight(true);
 
-        var scrollStart = coverOffsetTop < windowHeight ? 0 : coverOffsetTop;
+        var scrollStart = Math.max(coverOffsetTop - windowHeight, 0);
 
         console.log(scrollStart);
 
