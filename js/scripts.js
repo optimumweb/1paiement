@@ -18,30 +18,35 @@ $(document).ready(function() {
 
 });
 
+$(document).ready(function() {
+
+    var windowHeight = $(window).height();
+
+    $('.cover').each(function() {
+
+        var $cover = $(this);
+
+        var coverOffsetTop = $cover.offset().top,
+            coverHeight = $cover.outerHeight(true);
+
+        var scrollStart = coverOffsetTop < windowHeight ? 0 : coverOffsetTop;
+
+        console.log(scrollStart);
+
+    });
+
+});
+
 $(window).on('load scroll resize', function() {
 
     var scrollTop = $(window).scrollTop(),
         windowHeight = $(window).height();
-
-    console.log("scrollTop", scrollTop);
-    console.log("windowHeight", windowHeight);
 
     $('.cover').each(function() {
 
         var $cover = $(this),
             coverHeight = $cover.outerHeight(true),
             coverOffsetTop = $cover.offset().top;
-
-        console.log("coverHeight", coverHeight);
-        console.log("coverOffsetTop", coverOffsetTop);
-
-        var coverTopSpacing    = Math.max(coverOffsetTop - scrollTop, 0),
-            coverBottomSpacing = Math.max(windowHeight + scrollTop - coverOffsetTop - coverHeight, 0);
-
-        console.log("coverTopSpacing", coverTopSpacing);
-        console.log("coverBottomSpacing", coverBottomSpacing);
-
-        console.log("-------------------------------");
 
     });
 
