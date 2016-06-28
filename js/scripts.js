@@ -42,6 +42,8 @@ $(window).on('load scroll resize', function() {
     var scrollTop = $(window).scrollTop(),
         windowHeight = $(window).height();
 
+    console.log("scrollTop", scrollTop);
+
     $('.cover').each(function() {
 
         var $cover = $(this),
