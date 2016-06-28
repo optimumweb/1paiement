@@ -41,6 +41,8 @@ $(window).on('load scroll resize', function() {
         console.log("coverTopSpacing", coverTopSpacing);
         console.log("coverBottomSpacing", coverBottomSpacing);
 
+        console.log("-------------------------------");
+
     });
 
 });
