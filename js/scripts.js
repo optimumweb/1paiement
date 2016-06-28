@@ -30,7 +30,7 @@ $(window).on('load scroll resize', function() {
             coverOffsetTop = $cover.offset().top;
 
         var coverTopSpacing    = Math.max(coverOffsetTop - scrollTop, 0),
-            coverBottomSpacing = Math.max(windowHeight - coverTopSpacing - coverHeight, 0);
+            coverBottomSpacing = Math.max(windowHeight - ( coverOffsetTop - scrollTop ) - coverHeight, 0);
 
         console.log(coverTopSpacing, coverBottomSpacing);
 
