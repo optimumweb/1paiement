@@ -18,39 +18,26 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function() {
-
-    var windowHeight = $(window).height();
-
-    $('.cover').each(function() {
-
-        var $cover = $(this);
-
-        var coverOffsetTop = $cover.offset().top,
-            coverHeight = $cover.outerHeight(true);
-
-        var scrollStart = Math.max(coverOffsetTop - windowHeight, 0),
-            scrollEnd = coverOffsetTop + coverHeight;
-
-        console.log("scrollStart", scrollStart);
-        console.log("scrollEnd", scrollEnd);
-
-    });
-
-});
-
 $(window).on('load scroll resize', function() {
 
-    var scrollTop = $(window).scrollTop(),
+    var scrollTop    = $(window).scrollTop(),
         windowHeight = $(window).height();
 
     console.log("scrollTop", scrollTop);
 
     $('.cover').each(function() {
 
-        var $cover = $(this),
-            coverHeight = $cover.outerHeight(true),
-            coverOffsetTop = $cover.offset().top;
+        var $cover         = $(this),
+            coverOffsetTop = $cover.offset().top,
+            coverHeight    = $cover.outerHeight(true);
+
+        var scrollStart    = Math.max(coverOffsetTop - windowHeight, 0),
+            scrollEnd      = coverOffsetTop + coverHeight,
+            scrollProgress = ( scrollTop - scrollStart ) / ( scrollEnd - scrollStart );
+
+        var coverBgPosY = scrollProgress * 40 + 30;
+
+        $cover.css('background-position', '50% ' + coverBgPosY + '%')
 
     });
 
