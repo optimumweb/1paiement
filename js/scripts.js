@@ -30,7 +30,7 @@ $(document).ready(function() {
             coverHeight = $cover.outerHeight(true);
 
         var scrollStart = Math.max(coverOffsetTop - windowHeight, 0),
-            scrollEnd = scrollStart + coverHeight;
+            scrollEnd = coverOffsetTop - windowHeight + coverHeight;
 
         console.log("scrollStart", scrollStart);
         console.log("scrollEnd", scrollEnd);
