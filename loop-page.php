@@ -5,7 +5,7 @@
         <?php wpbp_post_inside_before(); ?>
         <?php if ( !get_post_meta(get_the_ID(), 'hide_the_title', true) ) : ?>
             <?php if ( has_featured_image() ) : ?>
-                <header class="page-header page-header-with-bg" style="background-image: url(<?php echo get_featured_image_url(); ?>);">
+                <header class="page-header page-header-with-bg parallax wpbp-parallax" style="background-image: url(<?php echo get_featured_image_url(); ?>);">
             <?php else : ?>
                 <header class="page-header">
             <?php endif; ?>
