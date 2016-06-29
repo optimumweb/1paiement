@@ -29,9 +29,11 @@ $(document).ready(function() {
         var coverOffsetTop = $cover.offset().top,
             coverHeight = $cover.outerHeight(true);
 
-        var scrollStart = Math.max(coverOffsetTop - windowHeight, 0);
+        var scrollStart = Math.max(coverOffsetTop - windowHeight, 0),
+            scrollEnd = scrollStart + coverHeight;
 
-        console.log(scrollStart);
+        console.log("scrollStart", scrollStart);
+        console.log("scrollEnd", scrollEnd);
 
     });
 
