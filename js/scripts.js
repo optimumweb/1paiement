@@ -37,7 +37,7 @@ $(window).on('load scroll resize', function() {
             coverBgPosYMax = $cover.data('parallax-max') || 70,
             coverBgPosY    = scrollProgress * ( parseInt(coverBgPosYMax) - parseInt(coverBgPosYMin) ) + parseInt(coverBgPosYMin);
 
-        $cover.css('background-position', '50% ' + coverBgPosY + '%')
+        $cover.css('background-position', '50% ' + coverBgPosY + '%');
 
     });
 
