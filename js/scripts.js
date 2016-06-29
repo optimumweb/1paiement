@@ -23,9 +23,7 @@ $(window).on('load scroll resize', function() {
     var scrollTop    = $(window).scrollTop(),
         windowHeight = $(window).height();
 
-    console.log("scrollTop", scrollTop);
-
-    $('.cover').each(function() {
+    $('.parallax').each(function() {
 
         var $cover         = $(this),
             coverOffsetTop = $cover.offset().top,
@@ -35,7 +33,9 @@ $(window).on('load scroll resize', function() {
             scrollEnd      = coverOffsetTop + coverHeight,
             scrollProgress = ( scrollTop - scrollStart ) / ( scrollEnd - scrollStart );
 
-        var coverBgPosY = scrollProgress * 40 + 30;
+        var coverBgPosYMin = $cover.data('parallax-min') || 30,
+            coverBgPosYMax = $cover.data('parallax-max') || 70,
+            coverBgPosY    = scrollProgress * ( parseInt(coverBgPosYMax) - parseInt(coverBgPosYMin) ) + parseInt(coverBgPosYMin);
 
         $cover.css('background-position', '50% ' + coverBgPosY + '%')
 
