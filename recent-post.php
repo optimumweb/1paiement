@@ -4,7 +4,7 @@
     <h4 class="post-title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h4>
-    <div class="post-content">
+    <div class="post-content-preview">
         <?php the_content(); ?>
     </div>
     <?php wpbp_post_inside_after(); ?>
