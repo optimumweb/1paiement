@@ -4,7 +4,9 @@
     <h4 class="question-title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h4>
-    <p class="question-excerpt"><?php the_excerpt(); ?></p>
+    <div class="question-excerpt">
+        <?php the_excerpt(); ?>
+    </div>
     <?php wpbp_post_inside_after(); ?>
 </article>
 <?php wpbp_post_after(); ?>
